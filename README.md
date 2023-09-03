@@ -1,34 +1,37 @@
 ```
-░▒█░▒█░█▀▀▄░▒█▀▀▄░▒█░▄▀░▀█▀░▒█▄░▒█░▒█▀▀█░░░▒█▀▀▀█░▒█▀▀▄░▒█░▒█░▒█░▒█░▒█▀▄▀█░▒█▀▄▀█░▒█▀▀▀░▒█░░░░▒█▀▀▀█░▒█▀▀▀░▀▀█▀▀░▀▀█▀▀░▒█▀▀▀░▒█░░░
-░▒█▀▀█▒█▄▄█░▒█░░░░▒█▀▄░░▒█░░▒█▒█▒█░▒█░▄▄░░░░▀▀▀▄▄░▒█░░░░▒█▀▀█░▒█░▒█░▒█▒█▒█░▒█▒█▒█░▒█▀▀▀░▒█░░░░░▄▄▄▀▀░▒█▀▀▀░░▒█░░░░▒█░░░▒█▀▀▀░▒█░░░
-░▒█░▒█▒█░▒█░▒█▄▄▀░▒█░▒█░▄█▄░▒█░░▀█░▒█▄▄▀░░░▒█▄▄▄█░▒█▄▄▀░▒█░▒█░░▀▄▄▀░▒█░░▒█░▒█░░▒█░▒█▄▄▄░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄░░▒█░░░░▒█░░░▒█▄▄▄░▒█▄▄█
+  _   _            _    _                ____ _                _       _               _   
+ | | | | __ _  ___| | _(_)_ __   __ _   / ___| |__   ___  __ _| |_ ___| |__   ___  ___| |_ 
+ | |_| |/ _` |/ __| |/ / | '_ \ / _` | | |   | '_ \ / _ \/ _` | __/ __| '_ \ / _ \/ _ \ __|
+ |  _  | (_| | (__|   <| | | | | (_| | | |___| | | |  __/ (_| | |_\__ \ | | |  __/  __/ |_ 
+ |_| |_|\__,_|\___|_|\_\_|_| |_|\__, |  \____|_| |_|\___|\__,_|\__|___/_| |_|\___|\___|\__|
+                                |___/                                                      
 ```
 
-#    ACHTUNG - WICHTIG!   
-Greift ausschließlich Systeme an für die ihr eine Berechtigung habt (schriftlich!) bzw. für Lernzwecke freigegeben sind (Lernplattformen wie z.B. THM/HTB)
-Angriff auf fremde Systeme ist *illegal* und kann im schlimmsten Fall zu Gefängnisstrafen führen.
+#    Attention - IMPORTANT
+Only attack systems for which you have a (written!) permission or that are available for learning. (e.g. learn platforms like THM/HTB)
+Attacking systems without premission is *illegal* und can lead in worst case to jail time.
 
-# Seite für Challenge Boxen   
-* TryHackMe (THM): https://tryhackme.com (meine Empfehlung  um in die IT Security Materie reinzukommen, man wird bei den Basics an der Hand genommen beim Lernen und Üben!)  
+# Websites for Challenge Boxes
+* TryHackMe (THM): https://tryhackme.com (my recommendation to get into IT Security, you are guided during the learn process!)
 * HackTheBox (HTB): https://www.hackthebox.com
 
 # TryHackMe OpenVPN Guide  
 TryHackMe OpenVPN Guide:
-IP rausfinden nach OpenVPN Verbindung:
+Get the IP of the OpenVPN connection:
 
-Nach folgender Zeile im Verbindungslog suchen welche net_addr_v4_add beinhaltet:  
+Search for the following line in the connection log, which contains the string `net_addr_v4_add`:  
 `2022-12-29 06:17:28 net_addr_v4_add: 13.37.40.4/16 dev tun0`
 
-Die IP Adresse vor dem /16 ist eure zugewiesene IP Adresse im Netzwerk von THM. Also in dem Fall --> 13.37.40.4
+The IP address before /16 is your assigned IP address in the network of THM. So in this case --> `13.37.40.4`
 
-Alternativ: Wieder auf die Access Seite gehen nachdem ihr Verbunden seid (https://tryhackme.com/access), dort steht beim Feld "Internal Virtual IP Address" eure zugewiesene interne IP Adresse.
+Alternative: Access the Access page (https://tryhackme.com/access) of THM, there is in the field "Internal Virtual IP Address" your assigned IP address.
 
-Auch möglich: Ihr könnt ihr den TryHackme OpenVPN Raum nutzen, um die IP rauszufinden: https://tryhackme.com/room/openvpn
+Other possibility: You can do the TryHackMe OpenVPN room, to find the IP address: https://tryhackme.com/room/openvpn
 
-# Challenge Box Empfehlung  
-https://tryhackme.com/room/basicpentestingjt -> Empfehlung für begleites Hacken für Anfänger*innen
+# Challenge Box Recommendations  
+https://tryhackme.com/room/basicpentestingjt -> My recommendation for geuided hacking for beginners.
 
-# Webseiten Empfehlungen  
+# Website Recommendations  
 CyberChef: https://gchq.github.io/CyberChef/
 
 Hacktricks: https://book.hacktricks.xyz/welcome/readme
@@ -37,31 +40,31 @@ OWASP Cheat Sheet Series: https://cheatsheetseries.owasp.org/index.html
 
 GTFO Bins: https://gtfobins.github.io/
 
-# Tool Empfehlungen   
+# Tool Recommendations   
 Burp Suite Community Edition: https://portswigger.net/burp/communitydownload  
-Üblicherweise über euren Packetmanager auf Linux installierbar :-)  
-Ist in Kali Linux auch dabei.
+Usually installable with your package manager (apt, yum etc.) on Linux or installer downloadable for Windows.  
+Is included in Kali linux.
 
-man - Man Pages - Sammlung von Hilfs und Dokumentationsseiten; Aufruf: `man <programmname>`  
-Beispiel: `man nmap`
+man - Man Pages - Collection of help and documentationpages. Invoke: `man <program name>`  
+Example: `man nmap`
 
-nmap - Port Scanning Tool mit vielen Funktionalitäten
+nmap - Port Scanning Tool with a lot of functions
 
-ffuf (in Kali integriert) - Fuzzing/Bruteforcing Tool: https://github.com/ffuf/ffuf
+ffuf (integrated in Kali) - Fuzzing/Bruteforcing Tool: https://github.com/ffuf/ffuf
 
-SecLists - nützliche Listen: https://github.com/danielmiessler/SecLists
+SecLists - useful lists (fuzzing, credentials, etc.): https://github.com/danielmiessler/SecLists
 
-Scripte für automatisierte Reconnaissance am System (Hacktricks Mensch): https://github.com/carlospolop/PEASS-ng
+Scripts for automted reconnaissance on systems (developed by the person behind Hacktricks): https://github.com/carlospolop/PEASS-ng
 
-# Methoden Empfehlungen für Linux
+# Methodology Recommendations for Linux
 
-Übliche Dinge die man auch schnell manuell prüfen kann (Linux):
-* Dateien im Home Verzeichnis
-* Bash History
-* Berechtigungen im Home Verzeichnis
-* Cronjobs inkl. der Berechtigungen für die Dateien
-* Binaries mit SUID Bit gesetzt (Siehe GTFO Bins)
+Things you can easily check fast (on Linux systems):
+* Files in the home directories
+* Bash history
+* Permissions in the home directories
+* Cronjobs incl. permissions for the files
+* Binaries with SUID Bit set (check GTFO Bins)
 
-SUID Binaries suchen mittels find: `find <VERZEICHNIS> -perm -4000`  
-Beispiel: `find /bin -perm -4000 `  
-Siehe auch: https://linux-audit.com/finding-setuid-binaries-on-linux-and-bsd/
+Search for SUID Binaries with find: `find <DIRECTORY> -perm -4000`  
+Example: `find /bin -perm -4000 `  
+See also: https://linux-audit.com/finding-setuid-binaries-on-linux-and-bsd/
